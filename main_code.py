@@ -96,7 +96,7 @@ def Sentiment_Analyser(Data):
         print(blob.sentiment)
         tweet=tuple(tweet);
         NewData.append(tweet)
-    return NewData;
+    return NewData
 
 def Data_Locations(Data):
     #Collecting all tweet loactions beacuse we need to find their address, Lat and Long
@@ -145,6 +145,7 @@ def Add_Lat_Lat_Address_into_Data(Data):
             dT=tuple(d);
             NewData.append(dT);
     return NewData;
+
 if __name__ == '__main__':
     #Reading tweets into variable Data
     print("Reading Data from File")
@@ -159,7 +160,7 @@ if __name__ == '__main__':
     #Applying Sentiment Analysis on Tweets
     print("Calclating Sentiments")
     LL_S_Data=Sentiment_Analyser(LL_TP_Data);
-    print("Sentiment Aalysis Done");
+    print("Sentiment Analysis Done");
     #------Writing Final Data into File
     File=open(Dfilename.replace(".csv","")+"Lat_Lon_Sent.csv","w",encoding=("utf-8"));
     csvWritter=csv.writer(File);
